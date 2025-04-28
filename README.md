@@ -33,6 +33,8 @@ I used 11 columns from the original 30 which included variables such as
 - Broad phase of flight
 
 ## Data Preparation
+I utilized Python and Virtual Studio Code to load, prepare, analyze, and visualize the dataset.
+Python versions 3.8.5, 3.11.7, and 3.13.7 are effective.
 These are the packages i used in data analysis and visualization:
 
 ![importation](https://github.com/user-attachments/assets/2cec92e7-3021-4eee-b4f8-709983260308)
@@ -60,12 +62,20 @@ I additionally combined the aircaft make and model columns to create a 'Combined
 ```Python
 df['Combined'] = df['Make'] + ' ' + df['Model']
 ```
+Run each remaining cell to either see summary statistics, descriptive statistics, or the first 5 values of the sampled dataset used the .head() method.
 With this preparation, I was able to make visualizations with Matplotlib to determine Injuries caused by an aircraft, their severity, and make recommendations based on Engine type and Number of Engines.
 
 ## Repository Navigation Instructions
 This repository contains several files and folders.
+
 The project.ipynb is the notebook with the relevant code used to analyze the dataset.
+
 The 'Excel sheets-data' folder has the original Aviationdata spreadsheet, the USCodes, and the sampled dataframe spreadsheet.
+
 The Dashboard.twb is created from tableau and contains an interactive dashboard based on the sampled dataframe of 100 aircrafts.
+
 The 'Presentation.pptx' is a ppt document with the summary presentation of the project.
+
+The link to the tableau dashboard and story are [here](https://public.tableau.com/views/Dashboard_17458785633440/Story1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
+
 
