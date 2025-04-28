@@ -35,6 +35,37 @@ I used 11 columns from the original 30 which included variables such as
 ## Data Preparation
 These are the packages i used in data analysis and visualization:
 
+![importation](https://github.com/user-attachments/assets/2cec92e7-3021-4eee-b4f8-709983260308)
 
+I created a clean dataset by dropping missing values using the following dataframe function:
+```Python
+df_clean = df.dropna(subset=['Injury.Severity','Make', 'Model','Aircraft.damage', 'Number.of.Engines', 'Engine.Type','Total.Fatal.Injuries',
+       'Total.Serious.Injuries', 'Total.Minor.Injuries', 'Total.Uninjured',
+       'Weather.Condition', 'Broad.phase.of.flight'])
+```
+I then dropped duplicated data and created a sample of 100 aircrafts since working with the entire dataset of 88889 was proving difficult to visualize:
+```Python
+unique_aircrafts = df_clean.drop_duplicates(subset = ['Combined'])
+df_sample = unique_aircrafts.sample(n = 100, random_state= 42)
+```
+To facilitate risk calculation, I combined the Total fatal injuries, Total serious injuries, and Total minor injuries columns to create a 'Total Injuries' column which depicts the overall
+injries sustained by each aircraft.
+```Python
+def calculate_total(row):
+    return row['Total.Fatal.Injuries'] + row['Total.Serious.Injuries'] + row['Total.Minor.Injuries']
 
+df_sample['Total Injuries'] = df.apply(calculate_total, axis=1)
+```
+I additionally combined the aircaft make and model columns to create a 'Combined' column since each aircraft model is unique to a particular make. I utilized this column to uniquely identify each craft.
+```Python
+df['Combined'] = df['Make'] + ' ' + df['Model']
+```
+With this preparation, I was able to make visualizations with Matplotlib to determine Injuries caused by an aircraft, their severity, and make recommendations based on Engine type and Number of Engines.
+
+## Repository Navigation Instructions
+This repository contains several files and folders.
+The project.ipynb is the notebook with the relevant code used to analyze the dataset.
+The 'Excel sheets-data' folder has the original Aviationdata spreadsheet, the USCodes, and the sampled dataframe spreadsheet.
+The Dashboard.twb is created from tableau and contains an interactive dashboard based on the sampled dataframe of 100 aircrafts.
+The 'Presentation.pptx' is a ppt document with the summary presentation of the project.
 
