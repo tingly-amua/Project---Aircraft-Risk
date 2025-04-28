@@ -170,5 +170,16 @@ cython_debug/
 # Ruff stuff:
 .ruff_cache/
 
+.ipynb_checkpoints
+.twb
+
+
+
+
+
+
+
+
+
 # PyPI configuration file
 .pypirc
