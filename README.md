@@ -72,9 +72,7 @@ The project.ipynb is the notebook with the relevant code used to analyze the dat
 
 The 'Excel sheets-data' folder has the original Aviationdata spreadsheet, the USCodes, and the sampled dataframe spreadsheet.
 
-The Dashboard.twb is created from tableau and contains an interactive dashboard based on the sampled dataframe of 100 aircrafts.
-
-The 'Presentation.pptx' is a ppt document with the summary presentation of the project.
+The 'Presentation.pptx' is a ppt document with the summary presentation of the project and recommendations based on the data analysis.
 
 The link to the tableau dashboard and story are [here](https://public.tableau.com/views/Dashboard_17458785633440/Story1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
 
