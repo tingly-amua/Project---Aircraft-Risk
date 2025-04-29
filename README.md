@@ -76,4 +76,4 @@ The 'Presentation.pptx' is a ppt document with the summary presentation of the p
 
 The link to the tableau dashboard and story are [here](https://public.tableau.com/views/Dashboard_17458785633440/Story1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
 
-
+I am open to collaboration on the project. You can reach me at: tinglyamua@gmail.com
